@@ -1,0 +1,81 @@
+/* arenastyles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+#setup-screen {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#arena-settings, #terrain-settings, #tile-editing {
+  margin-bottom: 20px;
+}
+
+#range-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#range-slider-container input[type="range"] {
+  width: 100%;
+}
+
+#range-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+/* arenastyles.css */
+#arena-grid {
+  display: grid;
+  gap: 0px;
+  margin: 0px 0;
+  width: 400px; /* Fixed container size */
+  height: 400px; /* Fixed container size */
+  border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
+}
+
+.tile {
+  width: 100%; /* Tiles will fill their grid cells */
+  height: 100%; /* Tiles will fill their grid cells */
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.tile.disabled {
+  background-color: #ccc; /* Gray out disabled tiles */
+  pointer-events: none; /* Disable interactions */
+}
+
+.tile.water { background-color: #577CFF; }
+.tile.sand { background-color: #DEB389; }
+.tile.grasslands { background-color: #3A9C3D; }
+.tile.forests { background-color: #1E6216; }
+.tile.rocks { background-color: #666666; }
+
+/* arenastyles.css */
+#terrain-slider {
+  margin: 20px 0;
+}
+
+.noUi-connect {
+  background: #007bff; /* Color for the slider segments */
+}
+
+.noUi-handle {
+  background: #007bff; /* Color for the slider handles */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+  display: none; /* Hide the default handle lines */
+}

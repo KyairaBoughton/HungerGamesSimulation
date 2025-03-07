@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Setup</title>
+    <link rel="stylesheet" href="../../styles/arenastyles.css">
+    <link rel="stylesheet" href="../../javascript/libs/noUiSlider-15.8.1/dist/nouislider.min.css">
+    <script src="../../javascript/libs/perlin.js"></script>
+</head>
+<body>
+    <div id="setup-screen">
+        <h1>Arena Setup</h1>
+
+        <!-- Arena Settings -->
+        <div id="arena-settings">
+            <label for="arena-shape">Arena Shape:</label>
+            <select id="arena-shape">
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+            </select>
+
+            <label for="arena-size">Arena Size (tiles):</label>
+            <input type="number" id="arena-size" min="20" max="250" value="20">
+
+            <button id="generate-arena">Generate Arena</button>
+        </div>
+
+        <!-- Terrain Range Settings -->
+        <div id="terrain-settings">
+            <h2>Terrain Ranges</h2>
+            <div id="terrain-slider"></div>
+            <div id="range-labels">
+                <span>Water (0 - <span id="water-sand-label">0.2</span>)</span>
+                <span>Sand (<span id="sand-grasslands-label-start">0.2</span> - <span id="sand-grasslands-label-end">0.4</span>)</span>
+                <span>Grasslands (<span id="grasslands-forests-label-start">0.4</span> - <span id="grasslands-forests-label-end">0.6</span>)</span>
+                <span>Forests (<span id="forests-rocks-label-start">0.6</span> - <span id="forests-rocks-label-end">0.8</span>)</span>
+                <span>Rocks (<span id="rocks-label">0.8</span> - 1)</span>
+            </div>
+            <button id="update-terrain-ranges">Update Terrain Ranges</button>
+        </div>
+
+        <!-- Arena Grid -->
+        <div id="arena-grid"></div>
+
+        <!-- Tile Editing Controls -->
+        <div id="tile-editing">
+            <h2>Tile Editing</h2>
+            <p>Click on an individual tile and change its height!</p>
+            <label for="tile-height">Selected Tile Height:</label>
+            <input type="number" id="tile-height" step="0.1" min="0" max="1" value="0.5">
+            <button id="apply-tile-height">Apply Height</button>
+        </div>
+
+        <!-- Save Arena Button -->
+        <button id="save-arena">Save Arena</button>
+    </div>
+
+    <!-- Include noUiSlider JavaScript -->
+    <script src="../../javascript/libs/noUiSlider-15.8.1/dist/nouislider.min.js"></script>
+    <!-- Include your custom JavaScript file after the Perlin noise library -->
+    <script src="../../javascript/arenascript.js"></script>
+</body>
+</html>

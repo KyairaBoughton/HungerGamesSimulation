@@ -1,0 +1,108 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling on the main screen */
+    font-family: Arial, sans-serif;
+}
+
+#simulation-screen {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Arena Display (70% width) */
+#arena-display {
+    flex: 0 0 70%; /* 70% of the screen width */
+    display: grid;
+    gap: 1px; /* Small gap between tiles */
+    background-color: #f0f0f0;
+    overflow: show; /* Prevent scrolling */
+}
+
+.tile {
+    width: 100%; /* Tiles will fill their grid cells */
+    height: 100%; /* Tiles will fill their grid cells */
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.tile.disabled {
+    background-color: #ccc; /* Gray out disabled tiles */
+}
+
+.tile.water { background-color: #577CFF; }
+.tile.sand { background-color: #DEB389; }
+.tile.grasslands { background-color: #3A9C3D; }
+.tile.forests { background-color: #1E6216; }
+.tile.rocks { background-color: #666666; }
+
+/* Data Section (30% width) */
+#data-section {
+    flex: 0 0 30%; /* 30% of the screen width */
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-left: 2px solid #ccc;
+    overflow-y: auto;
+}
+
+/* Player Grid */
+#player-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px); /* Adjust image size */
+    gap: 10px;
+    justify-content: center;
+}
+
+.player-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.player-circle img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Crops image into a circle */
+    object-fit: cover;
+    border: 7px solid transparent; /* Default border (transparent) */
+}
+
+.player-circle.selected img {
+    border-color: #007bff; /* Highlight selected player */
+}
+
+/* Player Marker */
+.player-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red; /* For visibility */
+    position: absolute; /* Position it inside the tile */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for center alignment */
+}
+
+/* Cornucopia Tiles */
+.tile.cornucopia  {
+    background-color: gold; /* Cornucopia color */
+}
+
+/* Buttons Styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

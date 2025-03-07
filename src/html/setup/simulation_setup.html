@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Setup</title>
+    <link rel="stylesheet" href="../../styles/setupstyles.css"> <!-- Link to the simulation CSS -->
+</head>
+<body>
+    <div id="simulation-screen">
+        <!-- Arena Display (70% width) -->
+        <div id="arena-display"></div>
+
+        <!-- Data Section (30% width) -->
+        <div id="data-section">
+            <h2>Player Images</h2>
+            <div id="player-images">
+                <!-- Player images will be dynamically added here -->
+            </div>
+
+            <!-- Cornucopia Setup -->
+            <div id="cornucopia-setup" style="display: none;">
+                <h2>Cornucopia Setup</h2>
+                <label for="cornucopia-size">Cornucopia Size (2-5):</label>
+                <input type="number" id="cornucopia-size" min="2" max="5" value="2">
+                <button id="place-cornucopia">Place Cornucopia</button>
+            </div>
+
+            <!-- Save and Continue Button -->
+            <button id="save-positions">Save Positions</button>
+        </div>
+    </div>
+
+    <!-- Include your custom JavaScript file -->
+    <script src="../../javascript/simsetupscript.js"></script>
+</body>
+</html>

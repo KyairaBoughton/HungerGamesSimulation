@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation</title>
+    <link rel="stylesheet" href="../styles/simulationstyles.css"> <!-- Link to the simulation CSS -->
+</head>
+<body>
+    <div id="simulation-screen">
+        <!-- Arena and Data Section Container -->
+        <div id="arena-and-data">
+            <!-- Arena Display (70% width) -->
+            <div id="arena-display"></div>
+
+            <!-- Data Section (30% width) -->
+            <div id="data-section">
+                <h2>Player Information</h2>
+                <div id="player-info">
+                    <!-- Player information will be dynamically populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Log Section (full width, fixed height, scrollable) -->
+        <div id="text-log">
+            <h2>Simulation Log</h2>
+            <div id="log-content">
+                <p>Simulation start</p> <!-- Initial log message -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your custom JavaScript file -->
+    <script src="../javascript/simulationscript.js"></script>
+</body>
+</html>

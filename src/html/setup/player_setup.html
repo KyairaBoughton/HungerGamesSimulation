@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Setup</title>
+    <link rel="stylesheet" href="../../styles/playerstyles.css"> <!-- Link to the player setup CSS -->
+</head>
+<body>
+    <div id="player-setup-screen">
+        <h1>Player Setup</h1>
+
+        <!-- Player Grid -->
+        <div id="player-grid">
+            <!-- Players will be dynamically added here -->
+        </div>
+
+        <!-- Player Edit Modal -->
+        <div id="player-edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Edit Player</h2>
+                <form id="player-edit-form">
+                    <label for="player-name">Name:</label>
+                    <input type="text" id="player-name" name="player-name" required>
+
+                    <label for="player-image">Image:</label>
+                    <input type="file" id="player-image" name="player-image" accept="image/*">
+
+                    <label for="player-color">Color:</label>
+                    <input type="color" id="player-color" name="player-color" value="#ff0000"> <!-- Default color is red -->
+
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save and Display Button -->
+    <button id="save-characters">Save Characters</button>
+    <button id="add-player">Add Character</button>
+
+    <!-- Include your custom JavaScript file -->
+    <script src="../../javascript/playerscript.js"></script>
+</body>
+</html>
