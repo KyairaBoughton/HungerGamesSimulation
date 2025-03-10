@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Redirect to the next page when the button is clicked
     startGameButton.addEventListener('click', () => {
-        window.location.href = 'html/setup/arena_setup.html'; // Replace with the actual path to the next page
+        window.location.href = 'src/html/setup/arena_setup.html'; // Replace with the actual path to the next page
     });
 });
