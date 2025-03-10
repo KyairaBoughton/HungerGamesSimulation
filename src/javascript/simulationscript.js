@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         cornucopiaTiles = [];
 
-        // Place the cornucopia
+        //places cornucopia
         for (let i = 0; i < size; i++) {
             for (let j = 0; j < size; j++) {
                 const tileX = x + i;
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tile = arenaDisplay.querySelector(`[data-x="${tileX}"][data-y="${tileY}"]`);
                 if (tile && !tile.classList.contains('disabled')) {
                     const cornucopiaMarker = document.createElement('img');
-                    cornucopiaMarker.src = '../../../resources/arena/cornucopia.png'; // Replace with the actual path to the cornucopia image
+                    cornucopiaMarker.src = '../../resources/arena/cornucopia.png';
                     cornucopiaMarker.classList.add('cornucopia-marker');
                     tile.appendChild(cornucopiaMarker);
                     cornucopiaTiles.push({ x: tileX, y: tileY });
@@ -139,6 +139,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Clear the text log (remove example updates)
     logContent.innerHTML = '<p>Simulation start</p>';
 });
